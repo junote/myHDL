@@ -2,7 +2,7 @@
 *.log
 *.bak
 #vscode
-.metal
+.metals
 .bloop
 .bsp
 .vscode
