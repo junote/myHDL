@@ -6,7 +6,9 @@
 .bloop
 .bsp
 .vscode
-rtl/*
+rtl/*.vhd
+rtl/*.v
+rtl/*.sv
 project/project/*
 project/target/*
 project/metal.sbt
