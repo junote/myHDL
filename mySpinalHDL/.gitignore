@@ -11,7 +11,7 @@ rtl/*.v
 rtl/*.sv
 project/project/*
 project/target/*
-project/metal.sbt
+project/metals.sbt
 
 # sbt specific
 .cache/
