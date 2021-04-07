@@ -18,7 +18,7 @@
 
 package myworkshop
 
-import spinal.core._
+import spinal.core._ll
 import spinal.lib._
 
 import scala.util.Random
