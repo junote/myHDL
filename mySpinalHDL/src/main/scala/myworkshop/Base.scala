@@ -6,6 +6,10 @@ import spinal.lib.io.{TriState, TriStateArray, TriStateOutput}
 import spinal.lib.fsm._
 import javax.swing.text.html.parser.Entity
 
+import spinal.sim._
+import spinal.core.sim._
+import scala.util.Random
+
 class Inv(width: Int) extends Component {
   val io = new Bundle {
     val a = in Bits (width bits)
@@ -210,17 +214,21 @@ class PatternMealy extends Component {
 
     val state0: State = new State with EntryPoint {
       whenIsActive {
-        when(io.a === True)(goto(state0))
+        when(io.a === True) {
+          goto(state0)
+        }
         when(io.a === False)(goto(state1))
       }
       onExit{
-        when(io.a) (io.y := True)
+        when(io.a) {io.y := True}
       }
     }
 
     val state1: State = new State {
       whenIsActive {
-        when(io.a === True)(goto(state0))
+        when(io.a === True) {
+          goto(state0)
+        }
         when(io.a === False)(goto(state1))
 
       }
@@ -244,7 +252,7 @@ object MyBaseVerilog {
     SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(
       new PatternMoore
     )
-        SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(
+    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(
       new PatternMealy
     )
     SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new WhenExam(4))
@@ -260,5 +268,43 @@ object MySyncSpinalConfig
 object MySyncVerilogWithCustomConfig {
   def main(args: Array[String]) {
     MySyncSpinalConfig.generateVerilog(new Flopr(8))
+  }
+}
+
+object MyFsmSim {
+  def main(args: Array[String]) {
+    SimConfig.withWave.doSim(new PatternMoore) { dut =>
+      //Fork a process to generate the reset and the clock on the dut
+      dut.clockDomain.forkStimulus(period = 10)
+
+      var modelState = 0
+      for (idx <- 0 to 99) {
+        //Drive the dut inputs with random values
+        dut.io.a #= Random.nextBoolean()
+
+        //Wait a rising edge on the clock
+        dut.clockDomain.waitRisingEdge()
+
+      }
+    }
+  }
+}
+
+object MyFsmMealySim {
+  def main(args: Array[String]) {
+    SimConfig.withWave.doSim(new PatternMealy) { dut =>
+      //Fork a process to generate the reset and the clock on the dut
+      dut.clockDomain.forkStimulus(period = 10)
+
+      var modelState = 0
+      for (idx <- 0 to 99) {
+        //Drive the dut inputs with random values
+        dut.io.a #= Random.nextBoolean()
+
+        //Wait a rising edge on the clock
+        dut.clockDomain.waitRisingEdge()
+
+      }
+    }
   }
 }
