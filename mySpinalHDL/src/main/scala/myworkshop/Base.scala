@@ -179,30 +179,42 @@ class PatternMoore extends Component {
 
     val state0: State = new State with EntryPoint {
       whenIsActive {
-        when(io.a === True)(goto(state0))
-        when(io.a === False)(goto(state1))
+        when(io.a === True)(goto(state1))
+        when(io.a === False)(goto(state0))
       }
     }
 
     val state1: State = new State {
       whenIsActive {
         when(io.a === True)(goto(state2))
-        when(io.a === False)(goto(state1))
-
+        when(io.a === False)(goto(state0))
       }
     }
 
     val state2: State = new State {
       whenIsActive {
-        when(io.a === True)(goto(state0))
-        when(io.a === False)(goto(state1))
+        when(io.a === True)(goto(state2))
+        when(io.a === False)(goto(state3))
+      }
+    }
+    val state3: State = new State {
+      whenIsActive {
+        when(io.a === True)(goto(state4))
+        when(io.a === False)(goto(state0))
+      }
+    }
+    val state4: State = new State {
+      whenIsActive {
+        when(io.a === True)(goto(state2))
+        when(io.a === False)(goto(state0))
         io.y := True
       }
     }
-
   }
 }
 
+
+// not found how to use mealy machine
 class PatternMealy extends Component {
   val io = new Bundle {
     val a = in Bool
@@ -214,27 +226,35 @@ class PatternMealy extends Component {
 
     val state0: State = new State with EntryPoint {
       whenIsActive {
-        when(io.a === True) {
-          goto(state0)
-        }
-        when(io.a === False)(goto(state1))
+        when(io.a === True)(goto(state1))
+        when(io.a === False)(goto(state0))
       }
-      onExit{
-        when(io.a) {io.y := True}
-      }
+
     }
 
     val state1: State = new State {
       whenIsActive {
-        when(io.a === True) {
-          goto(state0)
-        }
-        when(io.a === False)(goto(state1))
-
+        when(io.a === True)(goto(state2))
+        when(io.a === False)(goto(state0))
       }
     }
-
+    val state2: State = new State {
+      whenIsActive {
+        when(io.a === True)(goto(state2))
+        when(io.a === False)(goto(state3))
+      }
+    }
+    val state3: State = new State {
+      whenIsActive {
+        when(io.a === True){
+          goto(state1)
+          io.y := True
+        }
+        when(io.a === False)(goto(state0))
+      }
+    }
   }
+
 }
 
 //Generate the MyTopLevel's Verilog
@@ -245,17 +265,17 @@ object MyBaseVerilog {
     SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new ReduceN(8))
     SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new mux2(8))
     SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new TriExample)
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new BitWise)
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new Inv2(4))
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new Flop(4))
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new Flopr(4))
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(new BitWise)
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(new Inv2(4))
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(new Flop(4))
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(new Flopr(4))
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(
       new PatternMoore
     )
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(
       new PatternMealy
     )
-    SpinalConfig(targetDirectory = "rtl").generateSystemVerilog(new WhenExam(4))
+    SpinalConfig(targetDirectory = "rtl").generateVerilog(new WhenExam(4))
   }
 }
 
