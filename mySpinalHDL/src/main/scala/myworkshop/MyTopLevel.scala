@@ -43,6 +43,7 @@ class MyTopLevel extends Component {
   io.flag  := (counter === 0) | io.cond1
 }
 
+/*
 //Generate the MyTopLevel's Verilog
 object MyTopLevelVerilog {
   def main(args: Array[String]) {
@@ -74,3 +75,4 @@ object MyTopLevelVerilogWithCustomConfig {
  }
 }
 
+*/

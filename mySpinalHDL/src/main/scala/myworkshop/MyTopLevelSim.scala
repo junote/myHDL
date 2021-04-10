@@ -6,7 +6,7 @@ import spinal.core.sim._
 
 import scala.util.Random
 
-
+/*
 //MyTopLevel's testbench
 object MyTopLevelSim {
   def main(args: Array[String]) {
@@ -36,3 +36,4 @@ object MyTopLevelSim {
     }
   }
 }
+*/

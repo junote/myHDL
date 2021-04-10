@@ -9,6 +9,7 @@
 rtl/*.vhd
 rtl/*.v
 rtl/*.sv
+rtl/*.bin
 project/project/*
 project/target/*
 project/metals.sbt

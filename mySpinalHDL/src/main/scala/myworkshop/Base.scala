@@ -258,6 +258,8 @@ class PatternMealy extends Component {
 }
 
 //Generate the MyTopLevel's Verilog
+
+/*
 object MyBaseVerilog {
   def main(args: Array[String]) {
     SpinalConfig(targetDirectory = "rtl").generateVerilog(new Inv(3))
@@ -328,3 +330,4 @@ object MyFsmMealySim {
     }
   }
 }
+*/

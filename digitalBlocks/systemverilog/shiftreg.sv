@@ -6,7 +6,7 @@ module shiftreg
      input logic sin,
      input logic [N-1:0] d,
      output logic [N-1:0] q,
-     output logic [N-1:0] sout
+     output logic  sout
    );
 
   always_ff@(posedge clk, posedge reset)
