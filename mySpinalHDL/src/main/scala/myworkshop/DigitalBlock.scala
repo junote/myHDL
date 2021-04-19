@@ -111,9 +111,9 @@ object MyDigitalBlockVerilog {
     // SpinalConfig(targetDirectory = "rtl").generateVerilog(new Adder(4))
     // SpinalConfig(targetDirectory = "rtl").generateVerilog(new Subtractor(4))
     // SpinalConfig(targetDirectory = "rtl").generateVerilog(new Comparator(4))
-    SpinalConfig(targetDirectory = "rtl").generateVerilog(new ShiftReg(4))
-    SpinalConfig(targetDirectory = "rtl").generateVerilog(new Counter(4))
-    SpinalConfig(targetDirectory = "rtl").generateVerilog(new RAM(4, 16))
-    SpinalConfig(targetDirectory = "rtl").generateVerilog(new SinROM(8, 256))
+    // SpinalConfig(targetDirectory = "rtl").generateVerilog(new ShiftReg(4))
+    // SpinalConfig(targetDirectory = "rtl").generateVerilog(new Counter(4))
+    // SpinalConfig(targetDirectory = "rtl").generateVerilog(new RAM(4, 16))
+    // SpinalConfig(targetDirectory = "rtl").generateVerilog(new SinROM(8, 256))
   }
 }
