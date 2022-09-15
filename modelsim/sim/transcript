@@ -1,0 +1,164 @@
+# //  Questa Sim-64
+# //  Version 2022.1 linux_x86_64 Jan 29 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+cd /home/jcai/myhdl/myHDL/modelsim/sim
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:18:13 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv 
+# -- Compiling module tb_test
+# 
+# Top level modules:
+# 	tb_test
+# End time: 15:18:13 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:18:16 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv 
+# -- Compiling module tb_test
+# 
+# Top level modules:
+# 	tb_test
+# End time: 15:18:16 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:18:20 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.sv 
+# -- Compiling module tb_test
+# 
+# Top level modules:
+# 	tb_test
+# End time: 15:18:20 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_test -vopt -voptargs=+acc
+# vsim work.tb_test -vopt -voptargs="+acc" 
+# Start time: 15:18:42 on Mar 10,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_test(fast)
+add wave -position insertpoint sim:/tb_test/*
+vsim -vopt -voptargs=+acc work.tb_test
+# End time: 15:19:46 on Mar 10,2022, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 1
+# vsim -vopt -voptargs="+acc" work.tb_test 
+# Start time: 15:19:46 on Mar 10,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.tb_test(fast)
+add wave -position insertpoint sim:/tb_test/*
+quit -sim
+# End time: 15:21:15 on Mar 10,2022, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 0
+cd /home/jcai/myhdl/myHDL/modelsim/spi
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:10 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv 
+# -- Compiling package i2c_pkg
+# -- Compiling package spi_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:22:10 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:10 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv 
+# -- Compiling module spi_ctrl
+# -- Importing package spi_pkg
+# 
+# Top level modules:
+# 	spi_ctrl
+# End time: 15:22:10 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:10 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv 
+# -- Compiling module spi_ctrl_tb
+# -- Importing package spi_pkg
+# 
+# Top level modules:
+# 	spi_ctrl_tb
+# End time: 15:22:10 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:15 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv 
+# -- Compiling package i2c_pkg
+# -- Compiling package spi_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:22:15 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:15 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv 
+# -- Compiling module spi_ctrl
+# -- Importing package spi_pkg
+# 
+# Top level modules:
+# 	spi_ctrl
+# End time: 15:22:15 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 15:22:15 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv 
+# -- Compiling module spi_ctrl_tb
+# -- Importing package spi_pkg
+# 
+# Top level modules:
+# 	spi_ctrl_tb
+# End time: 15:22:15 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Optimization canceled
+vsim -vopt -voptargs=+acc work.spi_ctrl_tb
+# vsim -vopt -voptargs="+acc" work.spi_ctrl_tb 
+# Start time: 15:23:16 on Mar 10,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_ctrl(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.spi_pkg(fast)
+# Loading work.spi_ctrl_tb(fast)
+# Loading work.spi_ctrl(fast)
+add wave -position insertpoint sim:/spi_ctrl_tb/spi_ctrl_u/*
+# Load canceled
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

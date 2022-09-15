@@ -1,0 +1,13 @@
+QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+Start time: 09:35:17 on Mar 09,2022
+vlog -l compile.log -sv pkg.sv spi_ctrl.sv spi_ctrl_tb.sv 
+-- Compiling package i2c_pkg
+-- Compiling package spi_pkg
+-- Compiling module spi_ctrl
+-- Importing package spi_pkg
+-- Compiling module spi_ctrl_tb
+
+Top level modules:
+	spi_ctrl_tb
+End time: 09:35:17 on Mar 09,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

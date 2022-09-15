@@ -1,0 +1,52 @@
+# //  Questa Sim-64
+# //  Version 2022.1 linux_x86_64 Jan 29 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Project file /home/jcai/myhdl/myHDL/modelsim/counter/counter.mpf was not found.
+# Unable to open project.
+cd /home/jcai/myhdl/myHDL/modelsim/counter
+# Loading project test
+cd /home/jcai/myhdl/myHDL/modelsim/sim
+# reading /opt/questa/questasim/linux_x86_64/../modelsim.ini
+vlib work
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 14:55:06 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v 
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(1): near ";": syntax error, unexpected ';'.
+# ** Error: /home/jcai/myhdl/myHDL/modelsim/sim/test.v(1): (vlog-13205) Syntax error found in the scope following 't'. Is there a missing '::'?
+# End time: 14:55:06 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 14:55:46 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v 
+# -- Compiling module tb_test
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(22): near "=": syntax error, unexpected '=', expecting '('.
+# ** Error: /home/jcai/myhdl/myHDL/modelsim/sim/test.v(30): (vlog-2730) Undefined variable: 'ns'.
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(30): near "~": syntax error, unexpected '~', expecting ';'.
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(36): near "~": syntax error, unexpected '~', expecting ';'.
+# End time: 14:55:46 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v
+# QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+# Start time: 14:55:48 on Mar 10,2022
+# vlog -reportprogress 300 -work work /home/jcai/myhdl/myHDL/modelsim/sim/test.v 
+# -- Compiling module tb_test
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(22): near "=": syntax error, unexpected '=', expecting '('.
+# ** Error: /home/jcai/myhdl/myHDL/modelsim/sim/test.v(30): (vlog-2730) Undefined variable: 'ns'.
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(30): near "~": syntax error, unexpected '~', expecting ';'.
+# ** Error: (vlog-13069) /home/jcai/myhdl/myHDL/modelsim/sim/test.v(36): near "~": syntax error, unexpected '~', expecting ';'.
+# End time: 14:55:48 on Mar 10,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+quit

@@ -1,0 +1,25 @@
+/home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv {1 {vlog -work work -vopt -sv -stats=none /home/jcai/myhdl/myHDL/modelsim/spi/pkg.sv
+QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+-- Compiling package i2c_pkg
+-- Compiling package spi_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv {1 {vlog -work work -vopt -sv -stats=none /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl.sv
+QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+-- Compiling module spi_ctrl
+-- Importing package spi_pkg
+
+Top level modules:
+	spi_ctrl
+
+} {} {}} /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/jcai/myhdl/myHDL/modelsim/spi/spi_ctrl_tb.sv
+QuestaSim-64 vlog 2022.1 Compiler 2022.01 Jan 29 2022
+-- Compiling module spi_ctrl_tb
+-- Importing package spi_pkg
+
+Top level modules:
+	spi_ctrl_tb
+
+} {} {}}

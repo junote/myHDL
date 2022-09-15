@@ -1,0 +1,27 @@
+# //  Questa Sim-64
+# //  Version 2022.1 linux_x86_64 Jan 29 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -l sim.log spi_ctrl_tb -do "run -all" 
+# Start time: 09:41:08 on Mar 09,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.spi_pkg(fast)
+# Loading work.spi_ctrl_tb(fast)
+# run -all
+# ** Note: $finish    : spi_ctrl_tb.sv(32)
+#    Time: 10 us  Iteration: 0  Instance: /spi_ctrl_tb
+# 1
+# Break at spi_ctrl_tb.sv line 32
+# End time: 09:41:52 on Mar 09,2022, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 0
